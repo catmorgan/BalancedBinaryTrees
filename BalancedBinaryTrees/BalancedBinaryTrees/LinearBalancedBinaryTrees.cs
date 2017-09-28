@@ -9,7 +9,6 @@ namespace BalancedBinaryTrees
 {
     public class LinearBalancedBinaryTrees
     {
-        public int numCalled = 0;
         public bool IsBinaryTreeBalanced(Node node)
         {
             if (node == null) return true;
@@ -22,7 +21,6 @@ namespace BalancedBinaryTrees
         private int nodeDepth(Node node)
         {
             if (node == null) return 0;
-            numCalled++;
             return 1 + Math.Max(nodeDepth(node.Left), nodeDepth(node.Right));
         }
     }
